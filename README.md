@@ -24,3 +24,12 @@
    rosrun GO2_tasks go2_getinfo eth0
    ```
    - **说明**：之前编写的踢球 `police` 功能均可正常使用。
+  
+## 创建和编译ros节点
+   1.在src/GO2_tasks/example/go2路径下可以添加相关ros节点的文件
+   2.然后在src/GO2_tasks/CMakeLists.txt这个路径编辑add executable and targetlink
+   ```bash
+   add_executable(go2_getgaitobs /home/nvidia/go2_ws/src/GO2_tasks/example/go2/go2_getgaitobs.cpp)
+   target_link_libraries(go2_getgaitobs ${catkin_LIBRARIES} unitree_sdk2)
+   ```
+   - **注意**：其他地方的cmakelists文件修改是不会被catkin_make 编译到的，如果编译的cache导致新添加的node没有被编译到，建议使用catkin_make clean then use the catkin_make
