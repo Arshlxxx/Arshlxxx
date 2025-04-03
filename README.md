@@ -26,8 +26,8 @@
    - **说明**：之前编写的踢球 `police` 功能均可正常使用。
   
 ## 创建和编译ros节点
-   1.在src/GO2_tasks/example/go2路径下可以添加相关ros节点的文件
-   2.然后在src/GO2_tasks/CMakeLists.txt这个路径编辑add executable and targetlink
+   - 1.在src/GO2_tasks/example/go2路径下可以添加相关ros节点的文件
+   - 2.然后在src/GO2_tasks/CMakeLists.txt这个路径编辑add executable and targetlink
    ```bash
    add_executable(go2_getgaitobs /home/nvidia/go2_ws/src/GO2_tasks/example/go2/go2_getgaitobs.cpp)
    target_link_libraries(go2_getgaitobs ${catkin_LIBRARIES} unitree_sdk2)
