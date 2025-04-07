@@ -6,7 +6,7 @@
    - 详情参考宇树文档中心：[快速入门](https://support.unitree.com/home/zh/developer/Quick_start)。
 
 ## 工作空间配置
-2. 进入工作空间（ws）后，运行以下命令：
+2. 进入工作空间（go2_ws,不是纯大写的那个，注意要找带有src的文件包才是标准的ros工作空间）后，运行以下命令：
    ```bash
    source devel/setup.bash
    ```
