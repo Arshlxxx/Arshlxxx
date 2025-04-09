@@ -7,8 +7,10 @@
 source devel/setup.sh
 rostopic echo /gait_observation
 ```
-新开一个终端可以查看该节点输出的信息
+ - 新开一个终端可以查看该节点输出的信息
 ```
+source devel/setup.sh
 rostopic list //查看当前所有的rose node
 rostopic echo /gait_observation  //查看gait obs node output
 ```
+ - 注意，每次开启新的终端需要使用ros相关功能都需要source一下，别忘记！！
