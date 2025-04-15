@@ -5,7 +5,7 @@
 ### 2.重新开一个终端source后，启动gait obs节点
 ```
 source devel/setup.sh
-rostopic echo /gait_observation
+rosrun GO2_tasks go2_getgaitobs eth0
 ```
  - 新开一个终端可以查看该节点输出的信息
 ```
@@ -20,3 +20,10 @@ rostopic echo /gait_observation  //查看gait obs node output
 rosrun GO2_tasks go2_lowcmd_init eth0 //初始化站姿
 rosrun GO2_tasks go2_robot_state eth0 //切换模式，单次切换，可从高到低也可从低到高
 ```
+
+### 4.启动推理
+在另一个文件夹中的go2_sim2real存放了ros版本的推理文件
+```
+rosrun go2_sim2real play_fake.py
+```
+然后就会接受ros并且进行推理/发布action
